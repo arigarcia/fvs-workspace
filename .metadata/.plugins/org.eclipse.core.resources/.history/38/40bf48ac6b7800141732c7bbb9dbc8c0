@@ -1,0 +1,16 @@
+package br.edu.ifpb.pos.facebook;
+
+import java.nio.charset.Charset;
+
+public class Configuration {
+	private Charset charset = Charset.defaultCharset();
+
+	public void setCharset(Charset charset) {
+	    this.charset = charset;
+    }
+	
+	public Charset getCharset() {
+	    return charset;
+    }
+	
+}

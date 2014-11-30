@@ -1,0 +1,7 @@
+package br.edu.ifpb.pos.facebook;
+
+import java.io.IOException;
+
+public interface FacebookService {
+	String createFeed(String token, String message) throws IOException;
+}

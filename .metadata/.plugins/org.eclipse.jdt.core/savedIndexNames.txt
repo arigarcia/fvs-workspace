@@ -1,0 +1,11 @@
+INDEX VERSION 1.127+/Users/ari/Swap/backup/ari.aula/fvs.engsoftware.frameworks/workspace/.metadata/.plugins/org.eclipse.jdt.core
+1955096601.index
+458322218.index
+999492046.index
+2075854809.index
+4271895116.index
+3385947714.index
+3059437756.index
+1753210909.index
+2909822897.index
+2285872006.index

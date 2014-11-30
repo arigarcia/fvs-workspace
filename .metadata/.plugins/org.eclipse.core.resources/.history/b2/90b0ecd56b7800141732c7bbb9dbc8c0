@@ -1,0 +1,51 @@
+package br.edu.ifpb.pos.facebook;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class FacebookServiceImpl implements FacebookService {
+	private final Configuration configuration;
+
+	public FacebookServiceImpl() {
+	    this(new Configuration());
+    }
+	
+	public FacebookServiceImpl(Configuration configuration) {
+	    this.configuration = configuration;
+    }
+
+	@Override
+	public String createFeed(String message) throws IOException{
+		String result = null;
+		//
+		URL url = new URL("https://graph.facebook.com/me/feed?access_token=" + configuration.getToken());
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		int length = 0;
+		try {
+			conn.setRequestMethod("POST");
+			conn.setDoInput(true);
+			conn.setDoOutput(true);
+			//
+			String data = "message=" + message;
+			conn.getOutputStream().write(data.getBytes(configuration.getCharset()));
+			//
+			length = conn.getContentLength();
+			InputStream in = conn.getInputStream();
+			byte[] b = new byte[length];
+			in.read(b);
+			result = new String(b);
+		} 
+		catch (IOException e) {
+			length = conn.getContentLength();
+			InputStream in = conn.getErrorStream();
+			byte[] b = new byte[length];
+			in.read(b);
+			result = new String(b);
+		}
+		//
+		return result;
+	}
+
+}

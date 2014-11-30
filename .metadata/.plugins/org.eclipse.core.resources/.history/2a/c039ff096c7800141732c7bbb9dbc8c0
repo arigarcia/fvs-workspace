@@ -1,0 +1,18 @@
+package br.edu.fvs.engsof.frameworks.app;
+
+import br.edu.ifpb.pos.facebook.FacebookService;
+
+public class FacebookWriterCustomServiceImpl implements	FacebookWriterCustomService {
+	private final FacebookService facebookService;
+	
+	public FacebookWriterCustomServiceImpl(FacebookService service) {
+		this.facebookService = service;
+	}
+
+	@Override
+	public void writeText(String text) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="configuration" class="br.edu.fvs.component.facebook.FacebookServiceImpl">
+        <constructor-arg>CAACEdEose0cBAHHHGlQVQjAZArN20l8sEUnwjglUCgycRnyucYR99CSBFgLyKICjN8KuYKBbaOqSrQZA8ZCvNIiXIRzrS8lBZBPpsu730ZAdjxUl1hSrkVxBvfzZC0dZCCDMaDfOBbFQ5Wan54BA0ZAyZBn03AsjcwZCBwjQh3jjD8TOWgNAsZClQo2cMlZAZCAvmz98xz5IEaQv8lOhbCqNzEEIO</constructor-arg>
+    </bean>
+
+</beans>
